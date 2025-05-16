@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>owo's site :3</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom animation for CTA button */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .animate-pulse-slow {
+      animation: pulse 2s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">:3</h1>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+        <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+      </ul>
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white">
+      <ul class="px-4 pb-4 space-y-2">
+        <li><a href="#home" class="block">Home</a></li>
+        <li><a href="#projects" class="block">Projects</a></li>
+        <li><a href="#skills" class="block">Skills</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="flex">
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto px-4 py-8" id="home">
+      <!-- Hero Section -->
+      <section class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-2">Hi, I'm happy</h2>
+        <h2 class="text-4xl font-bold mb-2">Welcome to My Portfolio</h2>
+        <p class="text-lg text-gray-600">High school student | developer | VR enthusiast</p>
+        <a href="mailto:roeder.lucas@pm.me">
+          <button  class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-2xl animate-pulse-slow">Contact Me</button>
+        </a>
+        </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="mb-12">
+        <h3 class="text-2xl font-semibold mb-6">Featured Projects</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold mb-2">traveltime</h4>
+            <p class="text-gray-600 mb-4">An app that tracks a user's usage of public transport.</p>
+            <a href="https://github.com/owohappy/travletime" class="text-blue-600 hover:underline">View Code</a>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold mb-2">OwOMacro</h4>
+            <p class="text-gray-600 mb-4">A little custom macro pad.</p>
+            <a href="https://github.com/owohappy/OwOMacro" class="text-blue-600 hover:underline">Check it out</a>
+          </div>
+          <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <h4 class="text-xl font-semibold mb-2">QuestVRCModder</h4>
+            <p class="text-gray-600 mb-4">A tool which used to allow one to mod their VRChat on a Quest (2).</p>
+            <a href="https://github.com/QuestVRC/QuestVRCModder" class="text-blue-600 hover:underline">View Code</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="mb-12">
+        <h3 class="text-2xl font-semibold mb-6">My Technical Skills</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h4 class="font-semibold text-lg mb-2">Programming Languages</h4>
+            <ul class="list-disc list-inside text-gray-700">
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>C/C++</li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h4 class="font-semibold text-lg mb-2">Frameworks & Tools</h4>
+            <ul class="list-disc list-inside text-gray-700">
+              <li>Node.js</li>
+              <li>FastAPI</li>
+              <li>Git/GitHub</li>
+            </ul>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <h4 class="font-semibold text-lg mb-2">Technologies</h4>
+            <ul class="list-disc list-inside text-gray-700">
+              <li>Linux</li>
+              <li>VR Development</li>
+              <li>Raspberry Pi</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner">
+    <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm"> 2025 owohappy </p>
+      <div class="flex space-x-4 mt-2 md:mt-0">
+        <a href="https://github.com/owohappy" class="text-gray-600 hover:text-blue-600">GitHub</a>
+        <a href="https://de.linkedin.com/in/lucas-r%C3%B6der-7b51b1225" class="text-gray-600 hover:text-blue-600">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
