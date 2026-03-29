@@ -1,1 +1,204 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico"><title>Caritas Care</title><script defer="defer" src="js/chunk-vendors.8119d3e8.js"></script><script defer="defer" src="js/app.957c3c85.js"></script><link href="css/app.92ada61f.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but this site doesn't work properly without JavaScript enabled. Please enable it to continue!!</strong></noscript><div id="app"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lucy desktop :3</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/98.css" />
+</head>
+<body>
+  <div id="boot-screen">Booting up...</div>
+
+  <div id="bsod" aria-hidden="true">
+    <p class="bsod-title">Bimbows</p>
+    <p>An error has occurred</p>
+    <p>Please restart your computer</p>
+    <p>Error code: 0x00000069</p>
+  </div>
+
+  <div id="desktop">
+    <div id="desktop-icons" aria-label="Desktop icons"></div>
+
+    <div id="start-menu" class="window" aria-hidden="true">
+      <div class="start-menu-shell">
+        <div class="start-rail" aria-hidden="true">
+          <span class="start-rail-windows">Windows</span>
+          <span class="start-rail-version">98</span>
+        </div>
+        <div class="window-body start-menu-body">
+          <label class="start-menu-label" for="start-search">Find Program</label>
+          <input id="start-search" type="text" placeholder="Type to search" autocomplete="off" />
+          <ul id="start-menu-items" class="tree-view" role="listbox" aria-label="Start menu items"></ul>
+          <div class="start-power-row">
+            <button id="start-restart" type="button">Restart</button>
+            <button id="start-shutdown" type="button">Shut Down</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="window app-window pos-about theme-about" id="windowIntro" data-app-id="about">
+      <div class="title-bar">
+        <div class="title-bar-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/address_book_user.png" alt="" class="title-bar-icon" />
+          <span>About Lucy</span>
+        </div>
+        <div class="title-bar-controls">
+          <button class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body about-body">
+        <img class="img-pfp" src="https://cdn.discordapp.com/avatars/1278647946094837802/66c4654df251caea764ef4e96f276249.webp" alt="Lucy profile" />
+        <p class="text-pfp">Hi, I'm Lucy</p>
+        <p class="text-desc">Young non-binary developer from Germany who loves building fun things.</p>
+        <p class="text-desc">Pick an icon, open the terminal, and explore around.</p>
+        <div class="buttons-intro about-actions">
+          <button class="link-btn" data-url="https://discord.gg/gjhhhnsR2a">Discord</button>
+          <button class="link-btn" data-url="https://www.instagram.com/owohappy_hehe/">Instagram</button>
+          <button class="link-btn" data-url="https://github.com/owohappy">GitHub</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="window app-window pos-about-details theme-about-details" id="windowIntro2" data-app-id="about-details" style="z-index: 7; left: 448px; top: 20px;">
+      <div class="title-bar">
+        <div class="title-bar-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/address_book_pad_users.png" alt="" class="title-bar-icon" />
+          <span>About me details</span>
+        </div>
+        <div class="title-bar-controls">
+          <button class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <menu role="tablist">
+          <li role="tab" aria-selected="true"><a href="#">About me</a></li>
+        </menu>
+        <div class="window info-panel" role="tabpanel">
+          <div class="window-body">
+            <p>what to know about this 18yo puppy:</p>
+            <ul>
+              <li>vrchat addict</li>
+              <li>never horny :3</li>
+              <li>running on 3 brain cells and enough caffeine to kill a horse</li>
+            </ul>
+            <button class="link-btn" data-url="https://vrchat.com/home/user/usr_a07dad30-bd86-47c9-b787-6e6fb124c72c">Check it out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="window app-window pos-music theme-music" id="window3" data-app-id="music">
+      <div class="title-bar">
+        <div class="title-bar-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/cd_audio_cd-0.png" alt="" class="title-bar-icon" />
+          <span>music :3</span>
+        </div>
+        <div class="title-bar-controls">
+          <button class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body music-body">
+        <div class="music-top">
+          <img class="music-img" src="https://i.scdn.co/image/ab67616d0000b273d323f6132f7ea0a5bfe17c69" alt="Album cover" />
+          <div class="music-text">
+            <h3>eighteen - Nightcore</h3>
+            <p>PAYWALL</p>
+          </div>
+        </div>
+        <div class="field-row music-progress">
+          <label id="current-time-label" for="range23">00:00</label>
+          <input id="range23" type="range" min="0" max="100" value="0" />
+          <label id="duration-label" for="range23">03:00</label>
+        </div>
+        <div class="controls music-controls">
+          <button id="play-btn">Play</button>
+          <button id="pause-btn">Pause</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="window app-window pos-projects hidden-window theme-projects" id="windowProjects" data-app-id="projects">
+      <div class="title-bar">
+        <div class="title-bar-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/directory_closed-0.png" alt="" class="title-bar-icon" />
+          <span>Projects</span>
+        </div>
+        <div class="title-bar-controls">
+          <button class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body projects-window-body">
+        <div class="projects-toolbar">
+          <p class="projects-title">GitHub: @lucasroeder13</p>
+          <button id="projects-refresh" type="button">Refresh</button>
+        </div>
+        <p id="projects-status" class="projects-status">Loading repositories...</p>
+        <ul id="projects-list" class="projects-list" aria-live="polite"></ul>
+        <div class="projects-footer">
+          <a id="projects-profile-link" href="https://github.com/lucasroeder13" target="_blank" rel="noopener noreferrer">Open full profile</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="window app-window pos-contact hidden-window theme-contact" id="windowContact" data-app-id="contact">
+      <div class="title-bar">
+        <div class="title-bar-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/address_book-0.png" alt="" class="title-bar-icon" />
+          <span>Contact</span>
+        </div>
+        <div class="title-bar-controls">
+          <button class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p class="contact-title">Reach me</p>
+        <ul class="contact-list">
+          <li><strong>Email:</strong> placeholder@example.com</li>
+          <li><strong>Discord:</strong> owohappy</li>
+        </ul>
+        <div class="buttons-intro">
+          <button class="link-btn" data-url="https://github.com/lucasroeder13">GitHub</button>
+          <button class="link-btn" data-url="https://www.linkedin.com/">LinkedIn</button>
+          <button class="link-btn" data-url="mailto:placeholder@example.com">Email</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="window app-window pos-terminal theme-terminal" id="cmd" data-app-id="terminal">
+      <div class="title-bar">
+        <div class="title-bar-text">
+          <img src="https://win98icons.alexmeub.com/icons/png/console_prompt-0.png" alt="" class="title-bar-icon" />
+          <span>Command Line</span>
+        </div>
+        <div class="title-bar-controls">
+          <button class="btn-close" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body cmd-body">
+        <div class="cmd" id="cmdwind" role="region" aria-label="Terminal output">
+          <div id="cmd-history"></div>
+          <div id="input-line" class="cmd-input-line">
+            <span id="prompt-prefix">C:\Users\Lucy\Desktop&gt;</span>
+            <input type="text" id="commandInput" autocomplete="off" spellcheck="false" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="taskbar">
+      <div id="start-button-cnt">
+        <button id="start-button" class="start-button" type="button" aria-haspopup="listbox" aria-expanded="false">
+          <img src="img/wni98.png" alt="Start" />
+          <span class="start-button-text">Start</span>
+        </button>
+      </div>
+      <div id="taskbar-windows"></div>
+      <div id="time">00:00</div>
+    </div>
+  </div>
+
+  <script type="module" src="js/init.js"></script>
+</body>
+</html>
